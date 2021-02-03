@@ -1,0 +1,156 @@
+::-webkit-scrollbar {
+  width: 9px;
+  background-color: rgba(211, 0, 0, 0.87);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #223c50;
+}
+
+.todoApp {
+  display: flex;
+}
+
+.main {
+  width: 70%;
+  min-height: 100vh;
+  margin: 0 auto;
+  background:rgba(230, 248, 197, 0.829);
+  padding: 1rem;
+}
+
+.left-block {
+  width: 15%;
+  background: linear-gradient(to left, rgba(230, 248, 197, 0.829), rgba(0, 0, 0, 0.87) 95%);
+}
+
+.right-block {
+  width: 15%;
+  background: linear-gradient(to right, rgba(230, 248, 197, 0.829), rgba(0, 0, 0, 0.87) 95%);
+  transition: 1s;
+}
+
+.main ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.main ul li {
+  cursor: pointer;
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 4px;
+  border-radius: 10px;
+}
+
+.main li input {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.todo-title {
+  position: relative;
+}
+
+.todo-completed {
+  position: absolute;
+  content: "";
+  top: 60%;
+  left: 0px;
+  width: 0;
+  height: 1px;
+  background-color: #000;
+  transition: 0.5s ease;
+}
+
+.todo-completed-true { 
+  width: 100%;
+}
+
+.brd-black {
+  border: 2px solid #000;
+  transition: 1s border, 0.2s background;
+}
+
+.brd-green {
+  border: 2px solid rgba(22, 114, 19, 0.904);
+  transition: 1s border, 0.2s background;
+}
+
+.todo-li {
+  background:#fff;
+}
+
+.todo-li:hover {
+  background:  rgba(195, 224, 140, 0.829);
+}
+
+.todo-container {
+  position: relative;
+}
+
+.cls-btn {
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  top: 25%;
+}
+
+.cls-btn::after {
+  position: absolute;
+  top: 10px;
+  transform: rotate(45deg);
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: rgb(192, 103, 97);
+}
+
+.cls-btn::before {
+  position: absolute;
+  top: 10px;
+  transform: rotate(-45deg);
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: rgb(192, 103, 97);
+}
+
+.cls-btn:hover::after, .cls-btn:hover::before {
+  height: 2px;
+} 
+
+.add-todo {
+  border: 2px solid rgb(75, 97, 219);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 90%;
+}
+
+.add-todo input {
+  outline: none;
+  border: none;
+  background-image:none;
+  background-color:transparent;
+  height: 30px;
+  width: 95%;
+  padding-left: 1rem;
+}
+
+.add-todo-block {
+  display: flex;
+}
+
+.add-todo-btn {
+  width: 10%;
+  background-color:   rgba(195, 224, 140, 0.829);
+}
+
+.add-todo-btn button {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
